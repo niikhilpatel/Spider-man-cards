@@ -8,6 +8,8 @@ import row22Img2 from "./assets/row22-img2.png"
 import row22Img3 from "./assets/row22-img3.png"
 import row22Img4 from "./assets/row22-img4.png"
 import BellIcon from "./assets/bell.png"
+import Kingdom from "./assets/kingdom.jpg"
+import Mario from "./assets/mario.jpg"
 import { MdArrowBackIos } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
 import { MdDownloadForOffline } from "react-icons/md";
@@ -19,6 +21,12 @@ import { FaRegHeart } from "react-icons/fa";
 import { FaDownload } from "react-icons/fa";
 import { FaRegUser } from "react-icons/fa";
 import { IoIosSettings } from "react-icons/io";
+import { FaPlay } from "react-icons/fa";
+import { FaPlayCircle } from "react-icons/fa";
+import { MdNavigateNext } from "react-icons/md";
+<MdNavigateNext />
+import { GrFormPrevious } from "react-icons/gr";
+<GrFormPrevious />
 
 
 const App = () => {
@@ -58,15 +66,13 @@ const App = () => {
             </div>
           </div>
         </div>
-
-
         <div className="container-1">
           <div className="topbar">
             <div className="search">
               <input type="text" placeholder="Search movies" />
             </div>
             <div>
-              <ul className='nav font-size-small'>
+              <ul className='nav'>
                 <li>Movies</li>
                 <li>TV Series</li>
                 <li>Animation</li>
@@ -75,51 +81,69 @@ const App = () => {
               </ul>
             </div>
             <div className='bell'>
-              <img src={BellIcon} alt="" width={20} />
+              <img src={BellIcon} alt="" width={30} height={30} />
             </div>
             <div className='profile'>
-              <img src={row111} alt="" width={30} />
+              <img src={row111} alt="" width={30} height={30} />
               <h6>Arfi  Maulana</h6>
               <span>^</span>
-
             </div>
-
           </div>
-
           <div className="main">
             <div className="sidebar">
               <div className="sidebar-1">
                 <div className="sidebar-section">
                   <h5>New Trailer</h5>
                   <div className='new-trailer-section'>
-                    <div className='new-trailer-card'>
-                      <img src={row12} alt="Movie A" />
+                    <div className='new-trailer-card mb-2 mt-1'>
+                      <img src={Kingdom} alt="Movie A" />
                       <div className="text-overlay">
                         <h3>The last kingdom : Seven Kings die</h3>
+                        <FaPlay />
                       </div>
                     </div>
                     <div className='new-trailer-card'>
-                      <img src={row22Img1} alt="Movie B" />
+                      <img src={Mario} alt="Movie B" />
                       <div className="text-overlay">
                         <h3>The Supper Mario: Bros Movies</h3>
+                        <FaPlay />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-
-              <div className="sidebar-2">
+              <div className="sidebar-1">
                 <div className="sidebar-section">
                   <h5>Continue Watching</h5>
-                  <ul>
-                    <li>DarkSide</li>
-                    <li>Transformer</li>
-                    <li>Avatar: the Wild fire</li>
-                  </ul>
+                  <div className='continue-watching'>
+                    <div className="item">
+                      <img src={Mario} alt="Dark Season 3" />
+                      <div className="info">
+                        <h3>Dark Season 3</h3>
+                        <p>Episode 3</p>
+                      </div>
+                      <button>▶</button>
+                    </div>
+                    <div className="item">
+                      <img src={Mario} alt="Dark Season 3" />
+                      <div className="info">
+                        <h3>Transformer 2 </h3>
+                        <p>32min 12sec</p>
+                      </div>
+                      <button>▶</button>
+                    </div>
+                    <div className="item">
+                      <img src={Mario} alt="Dark Season 3" />
+                      <div className="info">
+                        <h3>Lupin Season 2</h3>
+                        <p>Episode 2</p>
+                      </div>
+                      <button>▶</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-
             <div className="main-content">
               <div className="content-1">
                 <div className="movie-list">
@@ -137,40 +161,73 @@ const App = () => {
                         <button>...</button>
                       </div>
                     </div>
+                    <div className='arrow'>
+                      <div className='arrow-style'>
+                      <GrFormPrevious />
+
+                      </div>
+                      <div className='arrow-style'>
+                      <MdNavigateNext />
+
+                      </div>
+                      
+                    </div>
                   </div>
                 </div>
               </div>
-
               <div className="content-2">
                 <h5>You might like</h5>
                 <div className="recommendations">
                   <div className="recommendation-card">
                     <img src={row22Img1} alt="Recommendation 1" />
                     <div className="text-overlay">
-                      <h3>The Flash (2023)</h3>
-                      <p>After being struck by lightning, Barry Allen is reborn.</p>
+                      <div className='w-75'>
+                        {/* <h6>Fantasy</h6> */}
+                        <h3>The Flash (2023)</h3>
+                        <p>After being struck by lightning, Barry Allen is reborn.</p>
+                      </div>
+                      <div className='play-button'>
+                        <FaPlayCircle />
+                      </div>
                     </div>
                   </div>
                   <div className="recommendation-card">
                     <img src={row22Img2} alt="Recommendation 2" />
                     <div className="text-overlay">
-                      <h3>Manifest (2018)</h3>
-                      <p>In a city where fire, water, land, and air residents live together.</p>
+                      <div className='w-75'>
+                        {/* <h6>Mistery</h6> */}
+                        <h3>Manifest (2018)</h3>
+                        <p>A city where fire water land & air residents live together.</p>
+                      </div>
+                      <div className='play-button'>
+                        <FaPlayCircle />
+                      </div>
                     </div>
                   </div>
                   <div className="recommendation-card">
                     <img src={row22Img3} alt="Recommendation 3" />
                     <div className="text-overlay">
-                      <h6>Animation</h6>
-                      <h3>Elemental (2023)</h3>
-                      <p>Montego Air Flight 828 try reintegrating into society.</p>
+                      <div className='w-75'>
+                        {/* <h6>Animation</h6> */}
+                        <h3>Elemental (2023)</h3>
+                        <p>Montego Air Flight 828 try reintegrating into society.</p>
+                      </div>
+                      <div className='play-button'>
+                        <FaPlayCircle />
+                      </div>
                     </div>
                   </div>
                   <div className="recommendation-card">
                     <img src={row22Img4} alt="Recommendation 4" />
                     <div className="text-overlay">
-                      <h3>Interstellar (2014)</h3>
-                      <p>When Earth becomes uninhabitable in the future.</p>
+                      <div className='w-75'>
+                        {/* <h6>Sci-fi</h6> */}
+                        <h3>Interstellar (2014)</h3>
+                        <p>When Earth becomes uninhabitable in the future.</p>
+                      </div>
+                      <div className='play-button'>
+                        <FaPlayCircle />
+                      </div>
                     </div>
                   </div>
                 </div>
