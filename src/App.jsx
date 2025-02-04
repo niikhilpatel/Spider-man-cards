@@ -1,5 +1,4 @@
 import './App.css'
-// import WebApp from "./assets/webApp.png"
 import row12 from "./assets/row12.jpg"
 import row111 from "./assets/row111.jpg"
 import row112 from "./assets/row112.jpeg"
@@ -27,7 +26,14 @@ import { MdNavigateNext } from "react-icons/md";
 <MdNavigateNext />
 import { GrFormPrevious } from "react-icons/gr";
 <GrFormPrevious />
-
+import Apes from "./assets/apes.jpg"
+import Captain from "./assets/captain.jpg"
+import Farzi from "./assets/farzi.jpg"
+import Kabirsingh from "./assets/kabirsingh.jpg"
+import Master from "./assets/master.jpg"
+import Ironman from "./assets/ironman.jpg"
+import Black from "./assets/Black.jpg"
+import Wanda from "./assets/Wanda.jpg"
 
 const App = () => {
   return (
@@ -56,7 +62,7 @@ const App = () => {
             <div className="search">
               <input type="text" placeholder="Steary.com" />
             </div>
-            <div className='d-flex align-items-center'>
+            <div className='leftbarright d-flex align-items-center'>
               <ul className='d-flex justify-content-between gap-4 mt-3'>
                 <li className='list-group-item'><MdDownloadForOffline /></li>
                 <li className='list-group-item'><FaCloudUploadAlt /></li>
@@ -102,10 +108,33 @@ const App = () => {
                         <FaPlay />
                       </div>
                     </div>
-                    <div className='new-trailer-card'>
+                    <div className='new-trailer-card mb-2 mt-1'>
                       <img src={Mario} alt="Movie B" />
                       <div className="text-overlay">
                         <h3>The Supper Mario: Bros Movies</h3>
+                        <FaPlay />
+                      </div>
+                    </div>
+                    <div className='new-trailer-card mb-2 mt-1'>
+                      <img src={Apes} alt="Movie B" />
+                      <div className="text-overlay">
+                        <h3>Kingdom of the Planet of the Apes Trailer</h3>
+                        <FaPlay />
+                      </div>
+                    </div>
+                    <div className='new-trailer-card mb-2 mt-1'>
+                      <img src={Captain} alt="Movie B" />
+                      <div className="text-overlay">
+                        <h3>
+                          Captain America: Brave New World
+                        </h3>
+                        <FaPlay />
+                      </div>
+                    </div>
+                    <div className='new-trailer-card mb-2 mt-1'>
+                      <img src={Farzi} alt="Movie B" />
+                      <div className="text-overlay">
+                        <h3>Farzi : Trailer</h3>
                         <FaPlay />
                       </div>
                     </div>
@@ -125,7 +154,63 @@ const App = () => {
                       <button>▶</button>
                     </div>
                     <div className="item">
+                      <img src={Farzi} alt="Dark Season 3" />
+                      <div className="info">
+                        <h3>World Class Lover</h3>
+                        <p>Episode 3</p>
+                      </div>
+                      <button>▶</button>
+                    </div>
+                    <div className="item">
                       <img src={Mario} alt="Dark Season 3" />
+                      <div className="info">
+                        <h3>Kabir Singh</h3>
+                        <p>Episode 3</p>
+                      </div>
+                      <button>▶</button>
+                    </div>
+                    <div className="item">
+                      <img src={Farzi} alt="Dark Season 3" />
+                      <div className="info">
+                        <h3>Double Ismart</h3>
+                        <p>Episode 3</p>
+                      </div>
+                      <button>▶</button>
+                    </div>
+                    <div className="item">
+                      <img src={Master} alt="Dark Season 3" />
+                      <div className="info">
+                        <h3>Master</h3>
+                        <p>Episode 3</p>
+                      </div>
+                      <button>▶</button>
+                    </div>
+                    <div className="item">
+                      <img src={Ironman} alt="Dark Season 3" />
+                      <div className="info">
+                        <h3>Iron Man</h3>
+                        <p>Episode 1</p>
+                      </div>
+                      <button>▶</button>
+                    </div>
+                    <div className="item">
+                      <img src={Black} alt="Dark Season 3" />
+                      <div className="info">
+                        <h3>Black widow</h3>
+                        <p>Episode 3</p>
+                      </div>
+                      <button>▶</button>
+                    </div>
+                    <div className="item">
+                      <img src={Wanda} alt="Dark Season 3" />
+                      <div className="info">
+                        <h3>Wanda</h3>
+                        <p>Episode 3</p>
+                      </div>
+                      <button>▶</button>
+                    </div>
+                    <div className="item">
+                      <img src={Master} alt="Dark Season 3" />
                       <div className="info">
                         <h3>Transformer 2 </h3>
                         <p>32min 12sec</p>
@@ -153,7 +238,7 @@ const App = () => {
                         <h6>Animation</h6>
                         <h6>Adventure</h6>
                       </div>
-                      <span>Spider-Man: <br />Across the Spider-Verse</span>
+                      <span className='heading'>Spider-Man: <br />Across the Spider-Verse</span>
                       <p>Miles morals cataputs across the multiverse , where the encounters a team of spiderman. People charged with protecting the multiverse.</p>
                       <div className='button'>
                         <button>Watch</button>
@@ -163,25 +248,26 @@ const App = () => {
                     </div>
                     <div className='arrow'>
                       <div className='arrow-style'>
-                      <GrFormPrevious />
+                        <GrFormPrevious />
 
                       </div>
                       <div className='arrow-style'>
-                      <MdNavigateNext />
+                        <MdNavigateNext />
 
                       </div>
-                      
+
                     </div>
                   </div>
                 </div>
               </div>
+              
               <div className="content-2">
                 <h5>You might like</h5>
                 <div className="recommendations">
                   <div className="recommendation-card">
                     <img src={row22Img1} alt="Recommendation 1" />
                     <div className="text-overlay">
-                      <div className='w-75'>
+                      <div className='w-auto'>
                         {/* <h6>Fantasy</h6> */}
                         <h3>The Flash (2023)</h3>
                         <p>After being struck by lightning, Barry Allen is reborn.</p>
